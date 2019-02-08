@@ -1,0 +1,124 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFlaskApp</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <style>
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+
+        }
+
+        .jumbotron {
+            background-image: url("../static/Screenshot_2018-07-24 healthy-for-life .png");
+            background-size: cover;
+            width: 90%;
+            background-repeat: no-repeat;
+            height: auto;
+            margin: auto;
+        }
+
+        body {
+            background-image: url("../static/blue-poly-background.jpg");
+            background-size: cover;
+            width: auto;
+            background-repeat: no-repeat;
+            height: auto;
+
+        }
+
+        .container {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    {% include 'include/_navbar.html' %}
+    <div class="jumbotron">
+
+        <h1> Welcome To HealthCare</h1>
+        <p class='lead'> This application help you to find diabetic </p>
+
+    </div>
+    <div class='container'>
+    
+    <form action="http://localhost:5000" method="POST">
+        <span style="display:inline-block; width:350;"></span> <strong> Please fill the following details </strong>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-50">
+                <label for="Glucose"> Glucose </label> <span style="display:inline-block; width:140;"></span>
+                <input type="text" id="Glucose" name="Glucose" placeholder="Glucose" required>
+            </div>
+            <span style="display:inline-block; width:80;"></span>
+            <div class="col-50">
+                <label for="BloodPressure"> BloodPressure </label> <span style="display:inline-block; width:93;"></span>
+                <input type="text" name="BloodPressure" placeholder="BloodPressure" required>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-50">
+                <label for="Age"> Age </label> <span style="display:inline-block; width:170;"></span>
+                <input type="text" id="Age" name="Age" placeholder="Age" required>
+            </div>
+            <span style="display:inline-block; width:80;"></span>
+            <div class="col-50">
+                <label for="BMI"> BMI </label> <span style="display:inline-block; width:170;"></span>
+                <input type="text" name="BMI" placeholder="BMI" required>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-50">
+                <label for="SkinThickness"> SkinThickness </label> <span style="display:inline-block; width:95;"></span>
+                <input type="text" id="SkinThickness" name="SkinThickness" required placeholder="SkinThickness">
+            </div>
+            <span style="display:inline-block; width:80;"></span>
+            <div class="col-50">
+                <label for="Insulin"> Insulin </label> <span style="display:inline-block; width:152;"></span>
+                <input type="text" name="Insulin" placeholder="Insulin" required>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-50">
+                <label for="DiabetesPedigreeFunction"> DiabetesPedigreeFunction </label> <span style="display:inline-block; width:10;"></span>
+                <input type="text" id="DiabetesPedigreeFunction" required name="DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction">
+            </div>
+            <span style="display:inline-block; width:80;"></span>
+            <div class="col-50">
+                <label for="No of Pregnancies">No of Pregnancies </label> <span style="display:inline-block; width:67;"></span>
+                <input type="text" name="No of Pregnancies" placeholder="No of Pregnancies" required>
+            </div>
+        </div>
+        <br>
+        <span style="display:inline-block; width:400;"></span> <input type="submit" value="Submit"> <br> <br>
+    </form>
+
+    </div>
+    <div class="alert alert-success">
+        <strong>Great!</strong> You are healthy.
+    </div>
+    <div class="alert alert-danger">
+        <strong>Danger!</strong> You have diabetes.Please, consult Doctor
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
