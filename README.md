@@ -7,3 +7,5 @@ The objective of the dataset is to diagnostically predict whether or not a patie
 ## Feature
 
 The datasets consists of several medical predictor variables and one target variable, Outcome. Predictor variables includes the number of pregnancies the patient has had, their BMI, insulin level, age, glucose, skin thickness,blood pressure and diabetes pedigree function.
+
+![alt text](https://github.com/posi2/Diabetes_model/blob/master/static/MyFlaskApp.png)
